@@ -6,8 +6,6 @@ import { Context } from 'vm';
 
 export async function DELETE(request: Request ): Promise<NextResponse> {
     const body : {url : string}  = await request.json()
-
-    console.log( "oooooooo" ,body.url);
     
          await del(body.url);
 
